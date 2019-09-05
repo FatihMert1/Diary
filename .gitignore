@@ -1,0 +1,15 @@
+
+.idea
+/Diary.Api/bin
+/Diary.Api/obj
+/Diary.Api/appsettings.json
+
+
+/Diary.Business/obj/
+/Diary.Business/bin/
+/Diary.Data/bin/
+/Diary.Data/obj/
+/Diary.Tests.Integration/bin/
+/Diary.Tests.Integration/obj/
+/Diary.Tests.Units/obj/
+/Diary.Tests.Units/bin/
