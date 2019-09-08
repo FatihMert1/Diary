@@ -11,6 +11,7 @@ namespace Diary.Api.Consts
         public const string UnauthorizedAccess = "Unauthorized Access";
         public const string AuthenticateFailed = "Authenticate Failled";
         public const string AuthenticateSuccess = "Authenticate Successfully";
-        
+        public const string NotFoundApiKey = "Api Key Not Found";
+        public const string LessClaim = "Api Key Have Less Claim";
     }
 }

@@ -12,8 +12,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Diary.Data\Diary.Data.csproj" />
-      <Folder Include="Layers" />
-      <ProjectReference Include="..\Diary.Data\Diary.Data.csproj" />
     </ItemGroup>
+    
 
 </Project>
