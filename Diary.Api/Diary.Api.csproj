@@ -14,4 +14,9 @@
       <ProjectReference Include="..\Diary.Data\Diary.Data.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Diary.Data\Diary.Data.csproj" />
+    </ItemGroup>
+    
+
 </Project>

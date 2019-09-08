@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Diary.Api.Layers;
 using Diary.Data.Context;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -28,6 +29,9 @@ namespace Diary.Api
         public void ConfigureServices(IServiceCollection services)
         {
 
+            services.AddAuthentication()
+                .AddJwtBearer();
+
             services.AddDbContext<ApplicationDatabaseContext>(opt =>
                 {
                     opt.UseMySQL(Configuration.GetSection("ConnectionStrings:DefaultConnection").Value);
@@ -49,6 +53,7 @@ namespace Diary.Api
                 app.UseHsts();
             }
 
+            app.UseMiddleware<SecurityLayer>();
             app.UseHttpsRedirection();
             app.UseMvc();
         }
