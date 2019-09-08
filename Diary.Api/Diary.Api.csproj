@@ -11,11 +11,9 @@
     </ItemGroup>
 
     <ItemGroup>
-<<<<<<< HEAD
-      <Folder Include="Layers" />
-=======
       <ProjectReference Include="..\Diary.Data\Diary.Data.csproj" />
->>>>>>> develop
+      <Folder Include="Layers" />
+      <ProjectReference Include="..\Diary.Data\Diary.Data.csproj" />
     </ItemGroup>
 
 </Project>
