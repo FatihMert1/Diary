@@ -2,7 +2,6 @@
 
     <PropertyGroup>
         <TargetFramework>netcoreapp2.2</TargetFramework>
-        <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
     </PropertyGroup>
 
     <ItemGroup>
@@ -11,12 +10,8 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\Diary.Business\Diary.Business.csproj" />
       <ProjectReference Include="..\Diary.Data\Diary.Data.csproj" />
     </ItemGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\Diary.Data\Diary.Data.csproj" />
-    </ItemGroup>
-    
 
 </Project>

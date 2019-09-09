@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Diary.Api.Layers;
+﻿using Diary.Api.Layers;
+using Diary.Business.UOW;
 using Diary.Data.Context;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 
 namespace Diary.Api
 {
@@ -29,8 +23,9 @@ namespace Diary.Api
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddAuthentication()
-                .AddJwtBearer();
+            services.AddScoped<IUnitOfWork,UnitOfWork>();
+//            services.AddAuthentication()
+//                .AddJwtBearer();
 
             services.AddDbContext<ApplicationDatabaseContext>(opt =>
                 {

@@ -16,7 +16,4 @@
       <PackageReference Include="MySql.Data.EntityFrameworkCore.Design" Version="8.0.17" />
     </ItemGroup>
 
-    <ItemGroup>
-    </ItemGroup>
-
 </Project>

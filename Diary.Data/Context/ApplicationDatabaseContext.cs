@@ -5,14 +5,14 @@ using Microsoft.Extensions.Configuration;
 
 namespace Diary.Data.Context
 {
-    public class ApplicationDatabaseContext : DbContext
+    public sealed class ApplicationDatabaseContext : DbContext
     {
-        
         public DbSet<User> Users { get; set; }
         public DbSet<Entities.Diary> Diaries { get; set; }
 
-        public ApplicationDatabaseContext(DbContextOptions<ApplicationDatabaseContext> options) : base(options)
+        public ApplicationDatabaseContext(DbContextOptions options) : base(options)
         {
+            ChangeTracker.LazyLoadingEnabled = false;
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
