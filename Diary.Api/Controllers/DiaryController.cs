@@ -2,7 +2,6 @@ using System.Threading.Tasks;
 using Diary.Api.Consts;
 using Diary.Api.Models;
 using Diary.Business.UOW;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Diary.Api.Controllers
